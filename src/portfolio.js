@@ -30,6 +30,7 @@ const Header = () => (
         </a>
         <a
           href="https://www.linkedin.com/in/vasudevsoni"
+          target="_blank"
           rel="noopener noreferrer"
           className="iconLink"
         >
