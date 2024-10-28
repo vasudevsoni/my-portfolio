@@ -187,21 +187,6 @@ const projects = [
       { text: "Mobile Responsive", emoji: "📱" },
     ],
   },
-  {
-    title: "E-commerce Platform",
-    image:
-      "https://uicreative.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2021/03/03021341/ab-106.jpg",
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
-    description:
-      "A full-stack e-commerce platform with user authentication and payment integration.",
-    link: "https://ecommerce.example.com",
-    features: [
-      { text: "User Authentication", emoji: "🛡️" },
-      { text: "Payment Integration", emoji: "💰" },
-      { text: "Admin Dashboard", emoji: "👩‍💻" },
-      { text: "Mobile Responsive", emoji: "📱" },
-    ],
-  },
 ];
 
 export default Portfolio;
