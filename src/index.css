@@ -3,9 +3,13 @@ body {
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   font-optical-sizing: auto;
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 0;
   margin: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -19,13 +23,15 @@ body {
 }
 
 .title {
-  font-size: 3em;
-  font-weight: 900;
+  font-size: 2.5rem;
+  font-weight: 700;
   color: #000;
   margin: 10px 0;
 }
 
 .title-name {
+  font-size: 4rem;
+  font-weight: 900;
   background: #1a42ff;
   background: linear-gradient(to top, #1a42ff 20%, #000 85%);
   -webkit-background-clip: text;
@@ -42,7 +48,7 @@ body {
 
 .about-me {
   font-size: 1.3rem;
-  font-weight: 300;
+  font-weight: 400;
   color: #000;
   margin: 20px 0;
 }
@@ -73,6 +79,40 @@ body {
 .iconLink:hover {
   transform: translate(0, -3px);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.navbar {
+  margin: 0 40px 0 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  position: sticky;
+  top: 20px;
+  overflow: hidden;
+  z-index: 1000;
+  transition: all 213ms ease;
+}
+
+.navbar-bg {
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  padding-left: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 400;
+  transition: all 213ms ease;
+}
+
+.navbar a:hover {
+  transform: translate(0, -3px);
 }
 
 .section {
