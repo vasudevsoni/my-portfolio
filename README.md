@@ -6,7 +6,7 @@
 
 <h2>🌐 <strong>Live Demo</strong></h2>
 
-<p style="font-size: 1.1rem;">Check out the live version of my portfolio <a href="https://your-portfolio-link.com" style="color: #007bff; text-decoration: none; font-weight: bold;">here</a>. <!-- Replace with actual link if hosted --></p>
+<p style="font-size: 1.1rem;">Check out the live version of my portfolio <a href="https://vasudevsoni.github.io/my-portfolio" style="color: #007bff; text-decoration: none; font-weight: bold;">here</a>. <!-- Replace with actual link if hosted --></p>
 
 
 
@@ -34,7 +34,7 @@
 <h2 id="installation">⚙️ <strong>Installation</strong></h2>
 <ol style="font-size: 1.1rem;">
   <li><strong>Clone the repository:</strong>
-    <pre><code>git clone https://github.com/yourusername/portfolio.git
+    <pre><code>git clone https://github.com/vasudevsoni/my-portfolio.git
 cd portfolio
     </code></pre>
   </li>
