@@ -2,20 +2,10 @@
 
 <p style="text-align: center; font-size: 1.2rem;">Welcome to my personal portfolio! This React.js-powered application is a showcase of my skills, projects, and passion for technology and creativity. Dive in to explore my journey and the work that defines me.</p>
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 3a1df8c0975dbe847f6b0a0b417fe1ef43467514
 <h2>🌐 <strong>Live Demo</strong></h2>
 
 <p style="font-size: 1.1rem;">Check out the live version of my portfolio <a href="https://vasudevsoni.github.io/my-portfolio" style="color: #007bff; text-decoration: none; font-weight: bold;">here</a>. <!-- Replace with actual link if hosted --></p>
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 3a1df8c0975dbe847f6b0a0b417fe1ef43467514
 <h2>📚 <strong>Table of Contents</strong></h2>
 <ul style="font-size: 1.1rem;">
   <li><a href="#features" style="text-decoration: none; color: #333;">Features</a></li>
@@ -24,11 +14,6 @@
   <li><a href="#contributing" style="text-decoration: none; color: #333;">Contributing</a></li>
 </ul>
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 3a1df8c0975dbe847f6b0a0b417fe1ef43467514
 <h2 id="features">✨ <strong>Features</strong></h2>
 <ul style="font-size: 1.1rem;">
   <li><strong>Interactive Design:</strong> A clean and dynamic interface that puts the focus on content.</li>
@@ -38,11 +23,6 @@
   <li><strong>Responsive and Aesthetic:</strong> Optimized for both desktop and mobile, ensuring a seamless experience.</li>
 </ul>
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 3a1df8c0975dbe847f6b0a0b417fe1ef43467514
 <h2 id="installation">⚙️ <strong>Installation</strong></h2>
 <ol style="font-size: 1.1rem;">
   <li><strong>Clone the repository:</strong>
@@ -61,11 +41,6 @@ cd portfolio
   </li>
 </ol>
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 3a1df8c0975dbe847f6b0a0b417fe1ef43467514
 <h2 id="usage">🚀 <strong>Usage</strong></h2>
 <ul style="font-size: 1.1rem;">
   <li><strong>Explore Projects:</strong> View detailed information about my past work and live demos.</li>
@@ -73,11 +48,6 @@ cd portfolio
   <li><strong>Connect:</strong> Use the contact form or linked social media platforms to reach out to me.</li>
 </ul>
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 3a1df8c0975dbe847f6b0a0b417fe1ef43467514
 <h2 id="contributing">🤝 <strong>Contributing</strong></h2>
 <p style="font-size: 1.1rem;">Suggestions and improvements are always welcome! To contribute:</p>
 <ol style="font-size: 1.1rem;">
@@ -94,9 +64,4 @@ git push origin feature/your-feature
   <li><strong>Open a pull request.</strong></li>
 </ol>
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 3a1df8c0975dbe847f6b0a0b417fe1ef43467514
 <p style="text-align: center; font-size: 1.3rem;">✨ Thank you for visiting my portfolio. Let’s build something amazing together! ✨</p>
