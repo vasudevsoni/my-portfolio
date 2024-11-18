@@ -3,9 +3,12 @@ body {
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   font-optical-sizing: auto;
-  background-color: #ffffff;
   padding: 0;
   margin: 0;
+  background-image: url("./bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 html:focus-within {
@@ -24,33 +27,37 @@ html:focus-within {
 
 .title {
   font-size: 2.5rem;
-  font-weight: 700;
-  color: #000;
+  font-weight: 900;
+  color: #fff;
   margin: 10px 0;
 }
 
 .title-name {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 900;
-  background: #1a42ff;
-  background: linear-gradient(to top, #1a42ff 20%, #000 85%);
+  color: #000;
+  background-color: #fff;
+  padding: 0 10px;
+  font-style: italic;
+  /* background: linear-gradient(to top, rgb(22, 37, 251) 20%, #fff 85%);
   -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
 }
 
 .subtitle {
   font-size: 2.5rem;
-  color: #000;
+  color: #fff;
   font-weight: 700;
   margin: 10px 0;
 }
 
 .about-me {
-  font-size: 1.3rem;
-  font-weight: 400;
-  color: #000;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #fff;
   margin: 20px 0;
+  line-height: 1.5;
 }
 
 .contactLinks {
@@ -69,16 +76,20 @@ html:focus-within {
   height: 30px;
   padding: 5px;
   border-radius: 7px;
-  background-color: #fff;
-  color: #000;
+  color: #fff;
   text-decoration: none;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   transition: all 213ms ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
 .iconLink:hover {
   transform: translate(0, -3px);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.75);
 }
 
 .navbar {
@@ -100,11 +111,12 @@ html:focus-within {
   -webkit-backdrop-filter: blur(20px);
   border-radius: 10px;
   padding-left: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .navbar a {
   text-decoration: none;
-  color: black;
+  color: #fff;
   display: block;
   font-size: 1.1rem;
   font-weight: 400;
@@ -116,13 +128,14 @@ html:focus-within {
 }
 
 .section {
-  margin: 40px 40px 80px 40px;
+  margin: 40px 40px 100px 40px;
 }
 
 .sectionTitle {
-  color: #000;
+  color: #fff;
   font-size: 2rem;
   font-weight: 700;
+  margin-bottom: 50px;
 }
 
 .skills {
@@ -132,20 +145,31 @@ html:focus-within {
   flex-wrap: wrap;
 }
 
+@media only screen and (max-width: 640px) {
+  .skills {
+    justify-content: center;
+  }
+}
+
 .skillCard {
   width: 75px;
   height: 75px;
   padding: 10px;
+  cursor: pointer;
   border-radius: 7px;
   object-fit: contain;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  cursor: pointer;
   transition: all 213ms ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
 .skillCard:hover {
   transform: translate(0, -3px);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.75);
 }
 
 .projectGrid {
@@ -155,11 +179,19 @@ html:focus-within {
 }
 
 .card {
-  background-color: #fff;
-  color: #000;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  color: #fff;
   max-height: fit-content;
   border-radius: 15px;
+  transition: all 213ms ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .cardImage {
@@ -178,19 +210,19 @@ html:focus-within {
   margin-top: 0;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #000;
+  color: #fff;
   margin-bottom: 2px;
 }
 
 .cardDescription {
   font-size: 0.875rem;
   font-weight: 400;
-  color: #000;
+  color: #fff;
 }
 
 .cardTech {
   font-size: 0.875rem;
-  color: #000;
+  color: #fff;
   font-weight: 400;
 }
 
@@ -205,7 +237,7 @@ html:focus-within {
   align-items: center;
   font-size: 0.875rem;
   font-weight: 400;
-  color: #000;
+  color: #fff;
   margin-bottom: 6px;
 }
 
@@ -227,9 +259,9 @@ html:focus-within {
   display: inline-block;
   padding: 10px 12px;
   border-radius: 7px;
-  background-color: #000;
+  background-color: #fff;
   text-transform: capitalize;
-  color: #fff;
+  color: #000;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.8rem;
@@ -238,9 +270,7 @@ html:focus-within {
 }
 
 .button:hover {
-  background-color: #595959;
   transform: translate(0, -3px);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 [data-tooltip] {
@@ -273,10 +303,10 @@ html:focus-within {
   text-overflow: ellipsis;
   padding: 5px 8px;
   border-radius: 7px;
-  background: #ffffff;
-  color: #000000;
+  background: #fff;
+  color: #000;
   z-index: 100;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.75);
 }
 
 [data-tooltip]:hover::before,
@@ -293,7 +323,7 @@ html:focus-within {
 [data-tooltip][data-flow^="top"]::before {
   bottom: 100%;
   border-bottom-width: 0;
-  border-top-color: #ffffff;
+  border-top-color: #fff;
 }
 
 [data-tooltip]:not([data-flow])::after,
@@ -312,7 +342,7 @@ html:focus-within {
 [data-tooltip][data-flow^="bottom"]::before {
   top: 100%;
   border-top-width: 0;
-  border-bottom-color: #ffffff;
+  border-bottom-color: #fff;
 }
 
 [data-tooltip][data-flow^="bottom"]::after {
@@ -328,7 +358,7 @@ html:focus-within {
 [data-tooltip][data-flow^="left"]::before {
   top: 50%;
   border-right-width: 0;
-  border-left-color: #ffffff;
+  border-left-color: #fff;
   left: calc(0em - 5px);
   transform: translate(-0.5em, -50%);
 }
@@ -342,7 +372,7 @@ html:focus-within {
 [data-tooltip][data-flow^="right"]::before {
   top: 50%;
   border-left-width: 0;
-  border-right-color: #ffffff;
+  border-right-color: #fff;
   right: calc(0em - 7px);
   transform: translate(0.4em, -50%);
 }

@@ -21,7 +21,7 @@ export default function App() {
   }, []);
 
   return (
-    <>
+    <div className="gradient">
       <div className="container">
         <Navbar color={color} />
         <Header />
@@ -29,7 +29,7 @@ export default function App() {
         <Projects />
         <Footer />
       </div>
-    </>
+    </div>
   );
 }
 
@@ -53,12 +53,17 @@ function Header() {
         <h1 className="title">
           Hi, I'm <span className="title-name">Vasudev Soni</span>
         </h1>
-        <p className="subtitle">Web Developer 👨🏻‍💻 + Entrepreneur 🚀</p>
+        <p className="subtitle">(👨🏻‍💻Web Developer + 🚀Entrepreneur)</p>
         <p className="about-me">
-          I'm a passionate web developer with experience in creating responsive
-          and user-friendly web applications. I specialize in React.js and enjoy
-          turning complex problems into simple, beautiful, and intuitive
-          designs.
+          I'm an entrepreneur and a passionate web developer with experience in
+          creating responsive and user-friendly web applications. I specialize
+          in React.js and enjoy turning complex problems into simple, beautiful,
+          and intuitive designs. <br />
+          As an entrepreneur, I thrive on identifying unique challenges and
+          building innovative, scalable solutions. My ventures include
+          developing apps and platforms that address real-world problems,
+          combining technical expertise with a vision for impactful,
+          user-centric products.
         </p>
         <div className="contactLinks">
           <a
@@ -113,7 +118,12 @@ function Skills() {
 function SkillCard({ skill }) {
   return (
     <div data-tooltip={skill.title} data-flow="bottom">
-      <img className="skillCard" src={skill.image} alt={skill.title} />
+      <img
+        className="skillCard"
+        src={skill.image}
+        alt={skill.title}
+        loading="lazy"
+      />
     </div>
   );
 }
@@ -136,7 +146,12 @@ function Projects() {
 function ProjectCard({ project }) {
   return (
     <div className={`card project${project.id}`}>
-      <img src={project.image} alt={project.title} className="cardImage" />
+      <img
+        src={project.image}
+        alt={project.title}
+        className="cardImage"
+        loading="lazy"
+      />
       <div className="cardContent">
         <h3 className="cardTitle">{project.title}</h3>
         <p className="cardDescription">{project.description}</p>
@@ -190,12 +205,12 @@ const skills = [
   {
     title: " HTML",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png",
+      "https://cdn.iconscout.com/icon/free/png-256/free-html-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-3-pack-logos-icons-2944937.png",
   },
   {
     title: "CSS",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
+      "https://cdn.iconscout.com/icon/free/png-256/free-css-logo-icon-download-in-svg-png-gif-file-formats--logos-pack-icons-722685.png",
   },
 
   {
@@ -206,7 +221,11 @@ const skills = [
   {
     title: "React.js",
     image:
-      "https://static-00.iconduck.com/assets.00/react-original-wordmark-icon-840x1024-vhmauxp6.png",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
+  },
+  {
+    title: "React Router",
+    image: "https://www.svgrepo.com/show/354262/react-router.svg",
   },
   {
     title: "BootStrap",
@@ -226,6 +245,11 @@ const skills = [
   {
     title: "Firebase",
     image: "https://brandeps.com/logo-download/F/Firebase-logo-02.png",
+  },
+  {
+    title: "GitHub",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png",
   },
 ];
 
