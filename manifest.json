@@ -1,6 +1,7 @@
 {
-  "short_name": "Portfolio",
-  "name": "my portfolio",
+  "short_name": "Vasudev's Portfolio",
+  "name": "Vasudev Soni's Personal Portfolio",
+  "description": "A personal portfolio website showcasing Vasudev Soni's skills, projects, and achievements.",
   "icons": [
     {
       "src": "favicon.ico",
