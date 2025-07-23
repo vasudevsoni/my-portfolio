@@ -21,7 +21,7 @@
   <li><strong>Responsive and Aesthetic:</strong> Optimized for both desktop and mobile, ensuring a seamless experience.</li>
 </ul>
 
-<h2 id="installation">⚙️ <strong>Installation</strong></h2>
+<h2 id="installation">⚙️ <strong>Installation steps</strong></h2>
 <ol style="font-size: 1.1rem;">
   <li><strong>Clone the repository:</strong>
     <pre><code>git clone https://github.com/vasudevsoni/my-portfolio.git
