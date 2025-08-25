@@ -1,300 +1,274 @@
-import React, { useEffect, useState } from "react";
-import { Mail, Linkedin, Github } from "lucide-react";
+import { motion } from "framer-motion";
+import { Mail, Linkedin, Github, ChevronDown } from "lucide-react";
 import "./index.css";
+
 import pizzamenu from "./pizza-menu.png";
 import eatnsplit from "./eat-n-split.png";
 import usepopcorn from "./use-popcorn.png";
+import cityphoria from "./cityphoria.png";
+import multisearch from "./multi-search.png";
 
 export default function App() {
-  const [color, setColor] = useState(false);
-
-  function changeColor() {
-    if (window.scrollY >= 90) {
-      setColor(true);
-    } else {
-      setColor(false);
-    }
-  }
-
-  useEffect(function () {
-    window.addEventListener("scroll", changeColor);
-  }, []);
-
   return (
-    <div className="gradient">
-      <div className="container">
-        <Navbar color={color} />
-        <Header />
-        <Skills />
-        <Projects />
-        <Footer />
-      </div>
+    <div className="wrapper">
+      <Navbar />
+      <Header />
+      <Skills />
+      <Projects />
+      <Footer />
     </div>
   );
 }
 
-function Navbar({ color }) {
+function Navbar() {
   return (
-    <nav className={color ? "navbar navbar-bg" : "navbar"}>
-      <p>
+    <motion.nav
+      initial={{ y: -50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="navbar"
+    >
+      <div className="nav-content">
         <a href="#skills">Skills</a>
-      </p>
-      <p>
         <a href="#projects">Projects</a>
-      </p>
-    </nav>
+      </div>
+    </motion.nav>
   );
 }
 
 function Header() {
   return (
     <header className="header">
-      <div className="headerContent">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="headerContent"
+      >
         <h1 className="title">
-          Hi, I'm <span className="title-name">Vasudev Soni</span>
+          Hi, I'm <span className="highlight">Vasudev Soni</span>
         </h1>
-        <p className="subtitle">(👨🏻‍💻Web Developer + 🚀Entrepreneur)</p>
-        <p className="about-me">
-          I'm an entrepreneur and a passionate web developer with experience in
-          creating responsive and user-friendly web applications. I specialize
-          in React.js and enjoy turning complex problems into simple, beautiful,
-          and intuitive designs. <br />
-          As an entrepreneur, I thrive on identifying unique challenges and
-          building innovative, scalable solutions. My ventures include
-          developing apps and platforms that address real-world problems,
-          combining technical expertise with a vision for impactful,
-          user-centric products.
+        <p className="subtitle">Web Developer • Entrepreneur</p>
+        <p className="about">
+          I build clean, modern web apps using React.js and other technologies.
+          I also enjoy creating scalable, user-centric products that solve
+          real-world problems.
         </p>
-        <div className="contactLinks">
-          <a
-            data-tooltip="Email"
-            data-flow="bottom"
-            href="mailto:vasudevsoni2001@gmail.com"
-            className="iconLink"
-          >
-            <Mail size={24} />
+
+        <motion.div
+          className="contactLinks"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8 }}
+        >
+          <a href="mailto:vasudevsoni2001@gmail.com" className="contact-link">
+            <Mail />
           </a>
           <a
-            data-tooltip="LinkedIn"
-            data-flow="bottom"
             href="https://www.linkedin.com/in/vasudevsoni"
             target="_blank"
-            rel="noopener noreferrer"
-            className="iconLink"
+            rel="noreferrer"
+            className="contact-link"
           >
-            <Linkedin size={24} />
+            <Linkedin />
           </a>
           <a
-            data-tooltip="GitHub"
-            data-flow="bottom"
             href="https://github.com/vasudevsoni"
             target="_blank"
-            rel="noopener noreferrer"
-            className="iconLink"
+            rel="noreferrer"
+            className="contact-link"
           >
-            <Github size={24} />
+            <Github />
           </a>
-        </div>
-      </div>
+        </motion.div>
+
+        <motion.div
+          className="scroll-indicator"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ repeat: Infinity, duration: 1.5 }}
+        >
+          <ChevronDown size={32} />
+        </motion.div>
+      </motion.div>
     </header>
   );
 }
 
 function Skills() {
+  const skills = [
+    {
+      title: "React.js",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+    },
+    {
+      title: "JavaScript",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+    },
+    {
+      title: "Flutter",
+      image:
+        "https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png",
+    },
+    {
+      title: "Python",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
+    },
+    {
+      title: "Firebase",
+      image: "https://brandeps.com/logo-download/F/Firebase-logo-02.png",
+    },
+    {
+      title: "Supabase",
+      image:
+        "https://images.seeklogo.com/logo-png/43/1/supabase-logo-png_seeklogo-435677.png",
+    },
+    {
+      title: "Tailwind CSS",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png",
+    },
+    {
+      title: "shadcn/ui",
+      image: "https://ui.shadcn.com/apple-touch-icon.png",
+    },
+  ];
+
   return (
-    <section className="section">
-      <h2 className="sectionTitle" id="skills" tabIndex={-1}>
+    <section id="skills" className="section">
+      <motion.h2
+        className="sectionTitle"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         Skills
-      </h2>
-      <div className="skills">
-        {skills.map((skill, index) => (
-          <SkillCard key={index} skill={skill} />
+      </motion.h2>
+      <div className="skillsGrid">
+        {skills.map((skill, i) => (
+          <motion.div
+            key={i}
+            className="skill-card"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: i * 0.1 }}
+            viewport={{ once: true }}
+          >
+            <img src={skill.image} alt={skill.title} className="skillImg" />
+            <p className="skill-title">{skill.title}</p>
+          </motion.div>
         ))}
       </div>
     </section>
-  );
-}
-
-function SkillCard({ skill }) {
-  return (
-    <div data-tooltip={skill.title} data-flow="bottom">
-      <img
-        className="skillCard"
-        src={skill.image}
-        alt={skill.title}
-        loading="lazy"
-      />
-    </div>
   );
 }
 
 function Projects() {
+  const projects = [
+    {
+      title: "Cityphoria",
+      desc: "Find Your Next Home City",
+      img: cityphoria,
+      link: "https://www.cityphoria.com",
+      github: "https://github.com/vasudevsoni/city-reviews-app",
+    },
+    {
+      title: "Multi Search Boost",
+      desc: "Chrome Extension to Search Across Sites",
+      img: multisearch,
+      link: "https://chromewebstore.google.com/detail/multi-search-boost-search/kcmfnehklmflhlmcjmjpkeccclijefag",
+      github: "https://github.com/vasudevsoni/multi-search",
+    },
+    {
+      title: "Use-Popcorn",
+      desc: "Movies app with OMDb API",
+      img: usepopcorn,
+      link: "https://vasudevsoni.github.io/use-popcorn/",
+      github: "https://github.com/vasudevsoni/use-popcorn",
+    },
+    {
+      title: "Eat-n-Split",
+      desc: "Split expenses with friends",
+      img: eatnsplit,
+      link: "https://vasudevsoni.github.io/eat-n-split/",
+      github: "https://github.com/vasudevsoni/eat-n-split",
+    },
+    {
+      title: "Pizza Menu",
+      desc: "Restaurant menu",
+      img: pizzamenu,
+      link: "https://vasudevsoni.github.io/pizza-menu/",
+      github: "https://github.com/vasudevsoni/pizza-menu",
+    },
+  ];
+
   return (
-    <section className="section">
-      <h2 className="sectionTitle" id="projects" tabIndex={-1}>
+    <section id="projects" className="section">
+      <motion.h2
+        className="sectionTitle"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
         Projects
-      </h2>
-      <div className="projectGrid">
-        {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+      </motion.h2>
+      <div className="projects-grid">
+        {projects.map((p, i) => (
+          <motion.div
+            key={i}
+            className="project-card"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.2 }}
+            viewport={{ once: true }}
+          >
+            <div className="project-image-container">
+              <img src={p.img} alt={p.title} className="projectImg" />
+            </div>
+            <div className="project-content">
+              <h3 className="project-title">{p.title}</h3>
+              <p className="project-desc">{p.desc}</p>
+              <div className="project-buttons">
+                <a
+                  href={p.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-link"
+                >
+                  View Project
+                </a>
+                {p.github && (
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="github-link"
+                  >
+                    Github Repo
+                  </a>
+                )}
+              </div>
+            </div>
+          </motion.div>
         ))}
       </div>
     </section>
-  );
-}
-
-function ProjectCard({ project }) {
-  return (
-    <div className={`card project${project.id}`}>
-      <img
-        src={project.image}
-        alt={project.title}
-        className="cardImage"
-        loading="lazy"
-      />
-      <div className="cardContent">
-        <h3 className="cardTitle">{project.title}</h3>
-        <p className="cardDescription">{project.description}</p>
-        <p className="cardTech">
-          Technologies: {project.technologies.join(", ")}
-        </p>
-        <ul className="featureList">
-          {project.features.map((feature, index) => (
-            <li key={index} className="featureItem">
-              {feature.emoji} {feature.text}
-            </li>
-          ))}
-        </ul>
-        <div className="buttons">
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="button"
-          >
-            Live Project ↗️
-          </a>
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="button"
-          >
-            GitHub Repo ↗️
-          </a>
-        </div>
-      </div>
-    </div>
   );
 }
 
 function Footer() {
   return (
-    <section className="section">
-      <p className="about-me">
-        Thank you for checking out my portfolio.{" "}
-        <span data-tooltip="Have a good day!" data-flow="bottom">
-          😀
-        </span>
-      </p>
-    </section>
+    <footer className="footer">
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        Thanks for visiting ✨
+      </motion.p>
+    </footer>
   );
 }
-
-const skills = [
-  {
-    title: " HTML",
-    image:
-      "https://cdn.iconscout.com/icon/free/png-256/free-html-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-3-pack-logos-icons-2944937.png",
-  },
-  {
-    title: "CSS",
-    image:
-      "https://cdn.iconscout.com/icon/free/png-256/free-css-logo-icon-download-in-svg-png-gif-file-formats--logos-pack-icons-722685.png",
-  },
-
-  {
-    title: "JavaScript",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png",
-  },
-  {
-    title: "React.js",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
-  },
-  {
-    title: "React Router",
-    image: "https://www.svgrepo.com/show/354262/react-router.svg",
-  },
-  {
-    title: "BootStrap",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png",
-  },
-  {
-    title: "Python",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/1/1f/Python_logo_01.svg",
-  },
-  {
-    title: "Flutter",
-    image:
-      "https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png",
-  },
-  {
-    title: "Firebase",
-    image: "https://brandeps.com/logo-download/F/Firebase-logo-02.png",
-  },
-  {
-    title: "GitHub",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png",
-  },
-];
-
-const projects = [
-  {
-    id: 1,
-    title: "Use-Popcorn",
-    image: usepopcorn,
-    technologies: ["HTML", "CSS", "JavaScript", "React.js", "GitHub"],
-    description: "Movies app built with React.js that utilizes OMDb API",
-    link: "https://vasudevsoni.github.io/use-popcorn",
-    github: "https://github.com/vasudevsoni/use-popcorn",
-    features: [
-      { text: "Dynamic Web App", emoji: "🪄" },
-      { text: "API Data Fetching", emoji: "⚡" },
-      { text: "Mobile Responsive", emoji: "📱" },
-    ],
-  },
-  {
-    id: 2,
-    title: "Eat-n-Split",
-    image: eatnsplit,
-    technologies: ["HTML", "CSS", "JavaScript", "React.js", "GitHub"],
-    description:
-      "Split your bills/expenses among friends and keep track of balance",
-    link: "https://vasudevsoni.github.io/eat-n-split",
-    github: "https://github.com/vasudevsoni/eat-n-split",
-    features: [
-      { text: "Dynamic Web App", emoji: "🪄" },
-      { text: "Aethetic UI", emoji: "😍" },
-      { text: "Mobile Responsive", emoji: "📱" },
-    ],
-  },
-  {
-    id: 3,
-    title: "Pizza Menu",
-    image: pizzamenu,
-    technologies: ["HTML", "CSS", "JavaScript", "React.js", "GitHub"],
-    description: "An online menu home page for a Pizza restaurant",
-    link: "https://vasudevsoni.github.io/pizza-menu/",
-    github: "https://github.com/vasudevsoni/pizza-menu",
-    features: [
-      { text: "Static Web App", emoji: "🧩" },
-      { text: "Aesthetic UI", emoji: "😍" },
-      { text: "Mobile Responsive", emoji: "📱" },
-    ],
-  },
-];
