@@ -1,10 +1,8 @@
-<h1 style="text-align: center;">🎨 <strong>Vasudev's Portfolio</strong> 🎨</h1>
+<h1 style="text-align: center;"><strong>My Portfolio</strong></h1>
 
-<p style="text-align: center; font-size: 1.2rem;">Welcome to my personal portfolio! This React.js-powered application is a showcase of my skills, projects, and passion for technology and creativity. Dive in to explore my journey and the work that defines me.</p>
+<p style="text-align: center; font-size: 1.2rem;">Welcome to the github repo of my personal portfolio! This React.js-powered application is a showcase of my skills, projects, and passion for technology and creativity. </p>
 
-<h2>🌐 <strong>Live Demo</strong></h2>
-
-<p style="font-size: 1.1rem;">Check out the live version of my portfolio <a href="https://vasudevsoni.github.io/my-portfolio" style="color: #007bff; text-decoration: none; font-weight: bold;">here</a>. <!-- Replace with actual link if hosted --></p>
+<p style="font-size: 1.1rem;">Check out the live version of my portfolio <a href="https://vasudevsoni.github.io/my-portfolio" style="color: #007bff; text-decoration: none; font-weight: bold;">here</a></p>
 
 <h2>📚 <strong>Table of Contents</strong></h2>
 <ul style="font-size: 1.1rem;">
@@ -23,7 +21,7 @@
   <li><strong>Responsive and Aesthetic:</strong> Optimized for both desktop and mobile, ensuring a seamless experience.</li>
 </ul>
 
-<h2 id="installation">⚙️ <strong>Installation</strong></h2>
+<h2 id="installation">⚙️ <strong>Installation steps</strong></h2>
 <ol style="font-size: 1.1rem;">
   <li><strong>Clone the repository:</strong>
     <pre><code>git clone https://github.com/vasudevsoni/my-portfolio.git
