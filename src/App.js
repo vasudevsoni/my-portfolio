@@ -6,6 +6,7 @@ import pizzamenu from "./pizza-menu.png";
 import eatnsplit from "./eat-n-split.png";
 import usepopcorn from "./use-popcorn.png";
 import cityphoria from "./cityphoria.png";
+import shotlab from "./shotlab.png";
 import multisearch from "./multi-search.png";
 
 export default function App() {
@@ -48,11 +49,10 @@ function Header() {
         <h1 className="title">
           Hi, I'm <span className="highlight">Vasudev Soni</span>
         </h1>
-        <p className="subtitle">Web Developer • Entrepreneur</p>
+        <p className="subtitle">Software Developer | Indie Hacker</p>
         <p className="about">
-          I build clean, modern web apps using React.js and other technologies.
-          I also enjoy creating scalable, user-centric products that solve
-          real-world problems.
+          I like to build clean, modern, & scalable web apps that solve
+          problems.
         </p>
 
         <motion.div
@@ -67,7 +67,6 @@ function Header() {
           <a
             href="https://www.linkedin.com/in/vasudevsoni"
             target="_blank"
-            rel="noreferrer"
             className="contact-link"
           >
             <Linkedin />
@@ -75,19 +74,10 @@ function Header() {
           <a
             href="https://github.com/vasudevsoni"
             target="_blank"
-            rel="noreferrer"
             className="contact-link"
           >
             <Github />
           </a>
-        </motion.div>
-
-        <motion.div
-          className="scroll-indicator"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 1.5 }}
-        >
-          <ChevronDown size={32} />
         </motion.div>
       </motion.div>
     </header>
@@ -145,7 +135,7 @@ function Skills() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        Skills
+        My skills
       </motion.h2>
       <div className="skillsGrid">
         {skills.map((skill, i) => (
@@ -168,6 +158,13 @@ function Skills() {
 
 function Projects() {
   const projects = [
+    {
+      title: "ShotLab",
+      desc: "Turn boring screenshots into scroll-stopping content!",
+      img: shotlab,
+      link: "https://shotlab.pro",
+      github: "https://github.com/vasudevsoni/screenshot-maker",
+    },
     {
       title: "Cityphoria",
       desc: "Find Your Next Home City",
@@ -213,7 +210,7 @@ function Projects() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        Projects
+        My projects
       </motion.h2>
       <div className="projects-grid">
         {projects.map((p, i) => (
@@ -232,12 +229,7 @@ function Projects() {
               <h3 className="project-title">{p.title}</h3>
               <p className="project-desc">{p.desc}</p>
               <div className="project-buttons">
-                <a
-                  href={p.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="project-link"
-                >
+                <a href={p.link} target="_blank" className="project-link">
                   View Project
                 </a>
                 {p.github && (

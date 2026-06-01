@@ -4,13 +4,10 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-  background: #f5f7fa;
+  background: #efefef;
   color: #1a1a1a;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
-  background-size: 40px 40px;
-  background-image: radial-gradient(circle, #b5b5b5 1px, rgba(0, 0, 0, 0) 1px);
 }
 
 .wrapper {
@@ -172,13 +169,13 @@ body {
 .skillsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 20px));
-  gap: 1.5rem;
+  gap: 20px;
 }
 
 .skill-card {
   background: #fff;
   padding: 1rem 1rem;
-  border-radius: 12px;
+  border-radius: 20px;
   text-align: center;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
   transition: box-shadow 0.3s;
@@ -188,13 +185,9 @@ body {
   justify-content: center;
 }
 
-.skill-card:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-}
-
 .skillImg {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
   margin-bottom: 1rem;
   border-radius: 12px;
@@ -210,22 +203,17 @@ body {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: 20px;
 }
 
 .project-card {
   background: #fff;
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
   transition: box-shadow 0.3s;
   display: flex;
   flex-direction: column;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
 }
 
 .project-image-container {
@@ -261,14 +249,12 @@ body {
 }
 
 .project-link {
-  display: inline-block;
+  width: 100%;
   padding: 0.4rem 0.8rem;
   background-color: #3863da;
   color: white;
   text-decoration: none;
-  border-radius: 8px;
-  font-weight: 400;
-  font-size: 15px;
+  border-radius: 50px;
   text-align: center;
   transition: background-color 0.3s;
   align-self: flex-start;
@@ -279,14 +265,12 @@ body {
 }
 
 .github-link {
-  display: inline-block;
+  width: 100%;
   padding: 0.4rem 0.8rem;
   background-color: #1e1e1e;
   color: white;
   text-decoration: none;
-  border-radius: 8px;
-  font-weight: 400;
-  font-size: 15px;
+  border-radius: 50px;
   text-align: center;
   transition: background-color 0.3s;
   align-self: flex-start;
