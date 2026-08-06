@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Github, ChevronDown } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 import "./index.css";
 
 import pizzamenu from "./pizza-menu.png";
@@ -67,6 +67,7 @@ function Header() {
           <a
             href="https://www.linkedin.com/in/vasudevsoni"
             target="_blank"
+            rel="noreferrer"
             className="contact-link"
           >
             <Linkedin />
@@ -74,6 +75,7 @@ function Header() {
           <a
             href="https://github.com/vasudevsoni"
             target="_blank"
+            rel="noreferrer"
             className="contact-link"
           >
             <Github />
@@ -229,7 +231,12 @@ function Projects() {
               <h3 className="project-title">{p.title}</h3>
               <p className="project-desc">{p.desc}</p>
               <div className="project-buttons">
-                <a href={p.link} target="_blank" className="project-link">
+                <a
+                  href={p.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-link"
+                >
                   View Project
                 </a>
                 {p.github && (
